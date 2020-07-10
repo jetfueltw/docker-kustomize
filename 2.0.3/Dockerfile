@@ -12,4 +12,4 @@ RUN apk add --no-cache git openssh-client && \
 # Disable host key checking (NOTE: makes you susceptible to man-in-the-middle attacks)
 # WARNING: use only in docker container, if you use it with shell you will overwrite your user's ssh config
 RUN mkdir -p ~/.ssh && chmod 700 ~/.ssh && \
-    echo -e "Host *\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
+    echo -e "Host *\n\tStrictHostKeyChecking no\n\tUserKnownHostsFile /dev/null\n" > ~/.ssh/config
