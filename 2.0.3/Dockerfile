@@ -5,7 +5,7 @@ ENV KUSTOMIZE_VERSION=2.0.3
 
 WORKDIR /usr/local/bin
 
-RUN apk add --no-cache git openssh-client && \
+RUN apk add --no-cache git openssh-client bash && \
     wget -O ./kustomize https://github.com/kubernetes-sigs/kustomize/releases/download/v${KUSTOMIZE_VERSION}/kustomize_${KUSTOMIZE_VERSION}_linux_amd64 && \
     chmod +x ./kustomize
 
