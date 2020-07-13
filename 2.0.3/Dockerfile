@@ -1,5 +1,4 @@
-# build stage
-FROM alpine:latest AS builder
+FROM alpine:latest
 
 ENV KUSTOMIZE_VERSION=2.0.3
 
